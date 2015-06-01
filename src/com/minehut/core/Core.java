@@ -1,5 +1,7 @@
 package com.minehut.core;
 
+import com.minehut.commons.common.chat.F;
+import com.minehut.core.command.commands.RankSetCommand;
 import com.minehut.core.connection.ConnectionListener;
 import com.minehut.core.player.PlayerInfo;
 import com.minehut.core.player.Rank;
@@ -22,6 +24,8 @@ public class Core extends JavaPlugin {
     private DB db;
     private DBCollection playersCollection;
 
+    private boolean onlineMode;
+
     @Override
     public void onEnable() {
         this.instance = this;
@@ -29,6 +33,9 @@ public class Core extends JavaPlugin {
         this.connect();
 
         this.connectionListener = new ConnectionListener(this);
+
+        /* Commands */
+        new RankSetCommand(this);
     }
 
     public static void registerListener(Listener listener) {
@@ -44,14 +51,18 @@ public class Core extends JavaPlugin {
     }
 
     public Rank getRank(UUID uuid) {
-        DBObject r = new BasicDBObject("uuid", uuid.toString());
-        DBObject found = playersCollection.findOne(r);
+        if(onlineMode) {
+            DBObject r = new BasicDBObject("uuid", uuid.toString());
+            DBObject found = playersCollection.findOne(r);
 
-        if (found != null) {
-            String rankName = (String) found.get("rank");
-            return Rank.valueOf(rankName);
-        } else {
+            if (found != null) {
+                String rankName = (String) found.get("rank");
+                return Rank.valueOf(rankName);
+            } else {
             /* Player not found, return default */
+                return Rank.regular;
+            }
+        } else {
             return Rank.regular;
         }
     }
@@ -61,9 +72,16 @@ public class Core extends JavaPlugin {
             this.mongo = new MongoClient("localhost", 27017);
             this.db = mongo.getDB("minehut");
             this.playersCollection = db.getCollection("players");
+
+            this.onlineMode = true;
         } catch (Exception e) {
-            e.printStackTrace();
+            F.log("Couldn't connect to database, enabling offline mode.");
+            this.onlineMode = false;
         }
+    }
+
+    public boolean isOnlineMode() {
+        return onlineMode;
     }
 
     public MongoClient getMongo() {

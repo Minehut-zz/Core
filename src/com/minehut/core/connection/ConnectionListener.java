@@ -1,6 +1,5 @@
 package com.minehut.core.connection;
 
-import com.minehut.commons.common.chat.F;
 import com.minehut.core.Core;
 import com.minehut.core.connection.event.AsyncPlayerInfoInitiatedEvent;
 import com.minehut.core.player.PlayerInfo;
@@ -34,13 +33,16 @@ public class ConnectionListener implements Listener {
     @EventHandler
     public void onJoin(PlayerJoinEvent event) {
         PlayerInfo playerInfo = new PlayerInfo(event.getPlayer());
+        this.playerInfos.add(playerInfo);
 
-        Core.getInstance().getServer().getScheduler().runTaskAsynchronously(Core.getInstance(), new Runnable() {
-            @Override
-            public void run() {
-                Bukkit.getServer().getPluginManager().callEvent(new AsyncPlayerInfoInitiatedEvent(playerInfo, initiate(event.getPlayer(), playerInfo)));
-            }
-        });
+        if(core.isOnlineMode()) {
+            Core.getInstance().getServer().getScheduler().runTaskAsynchronously(Core.getInstance(), new Runnable() {
+                @Override
+                public void run() {
+                    Bukkit.getServer().getPluginManager().callEvent(new AsyncPlayerInfoInitiatedEvent(playerInfo, initiate(event.getPlayer(), playerInfo)));
+                }
+            });
+        }
     }
 
     /* Returns true if player is new */

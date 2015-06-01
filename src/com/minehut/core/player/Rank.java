@@ -10,7 +10,8 @@ import org.bukkit.entity.Player;
 public enum Rank {
     Owner("Owner", ChatColor.RED),
     Dev("Dev", ChatColor.RED),
-    Admin("Manager", ChatColor.RED),
+    Manager("Manager", ChatColor.RED),
+    Admin("Admin", ChatColor.RED),
     Ref("Ref", ChatColor.BLUE),
     Mod("Mod", ChatColor.YELLOW),
     dank("Dank", ChatColor.GREEN),
