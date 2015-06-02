@@ -20,14 +20,14 @@ import java.util.*;
 public class RankSetCommand extends Command {
 
     public RankSetCommand(JavaPlugin plugin) {
-        super(plugin, "rankset", Rank.Admin);
+        super(plugin, "setrank", Rank.Admin);
     }
 
     @Override
     public boolean call(Player player, ArrayList<String> args) {
 
         if (args.size() != 2) {
-            player.sendMessage(C.red + "/rankset (name) (rank)");
+            player.sendMessage(C.red + "/setrank (name) (rank)");
             return true;
         }
 
@@ -60,6 +60,8 @@ public class RankSetCommand extends Command {
             updated.put("credits", found.get("credits"));
             updated.put("first_joined", found.get("first_joined"));
             updated.put("last_online", found.get("last_online"));
+            updated.put("first_ip", found.get("first_ip"));
+            updated.put("recent_ip", player.getAddress());
 
             Core.getInstance().getPlayersCollection().update(found, updated);
 
