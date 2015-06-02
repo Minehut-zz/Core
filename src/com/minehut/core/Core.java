@@ -73,6 +73,12 @@ public class Core extends JavaPlugin {
             this.db = mongo.getDB("minehut");
             this.playersCollection = db.getCollection("players");
 
+            if (this.db == null) {
+                F.log("Couldn't connect to database, enabling offline mode.");
+                this.onlineMode = false;
+                return;
+            }
+
             this.onlineMode = true;
         } catch (Exception e) {
             F.log("Couldn't connect to database, enabling offline mode.");
