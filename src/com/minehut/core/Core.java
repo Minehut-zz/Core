@@ -2,6 +2,7 @@ package com.minehut.core;
 
 import com.minehut.commons.common.chat.F;
 import com.minehut.core.command.commands.RankSetCommand;
+import com.minehut.core.command.commands.UpdateCommand;
 import com.minehut.core.connection.ConnectionListener;
 import com.minehut.core.player.PlayerInfo;
 import com.minehut.core.player.Rank;
@@ -36,6 +37,7 @@ public class Core extends JavaPlugin {
 
         /* Commands */
         new RankSetCommand(this);
+//        new UpdateCommand(this);
     }
 
     public static void registerListener(Listener listener) {
@@ -57,9 +59,9 @@ public class Core extends JavaPlugin {
 
             if (found != null) {
                 String rankName = (String) found.get("rank");
-                return Rank.valueOf(rankName);
+                return Rank.getRank(rankName);
             } else {
-            /* Player not found, return default */
+                /* Player not found, return default */
                 return Rank.regular;
             }
         } else {

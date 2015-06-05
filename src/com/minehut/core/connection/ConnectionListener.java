@@ -63,7 +63,7 @@ public class ConnectionListener implements Listener {
             String rank = (String) found.get("rank");
             long credits = (long) found.get("credits");
 
-            playerInfo.setRank(Rank.valueOf(rank));
+            playerInfo.setRank(Rank.getRank(rank));
             playerInfo.setCredits(credits);
 
             /* Update latest played and player name */
@@ -71,10 +71,17 @@ public class ConnectionListener implements Listener {
             updated.put("name", player.getName());
             updated.put("rank", rank);
             updated.put("credits", credits);
+
             updated.put("first_joined", found.get("first_joined"));
             updated.put("last_online", new Date());
-            updated.put("first_ip", found.get("first_ip"));
-            updated.put("recent_ip", player.getAddress());
+
+            /* migration from MySQL issues */
+            if (found.get("first_ip") == null) {
+                updated.put("first_ip", player.getAddress().toString());
+            } else {
+                updated.put("first_ip", found.get("first_ip"));
+            }
+            updated.put("recent_ip", player.getAddress().toString());
 
             core.getPlayersCollection().update(found, updated);
 
@@ -93,8 +100,8 @@ public class ConnectionListener implements Listener {
         obj.put("first_joined", now);
         obj.put("last_online", now);
 
-        obj.put("first_ip", player.getAddress());
-        obj.put("recent_ip", player.getAddress());
+        obj.put("first_ip", player.getAddress().toString());
+        obj.put("recent_ip", player.getAddress().toString());
 
         core.getPlayersCollection().insert(obj);
     }
