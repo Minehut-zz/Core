@@ -1,6 +1,9 @@
 package com.minehut.core.player;
 
+import com.minehut.core.Core;
+import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
+import org.bukkit.permissions.PermissionAttachment;
 
 import java.util.UUID;
 
@@ -18,6 +21,16 @@ public class PlayerInfo {
         this.uuid = player.getUniqueId();
         this.rank = Rank.regular;
         this.credits = 0;
+    }
+
+    public void addPerm(Player player, String perm) {
+        PermissionAttachment pa = player.addAttachment(Core.getInstance());
+        pa.setPermission(perm, true);
+        Core.getInstance().getPerms().put(player.getUniqueId(), pa);
+    }
+
+    public boolean hasEnoughForCreditsPurchase(long amount) {
+        return (this.credits - amount) >= 0;
     }
 
     public String getName() {
@@ -42,6 +55,12 @@ public class PlayerInfo {
 
     public void setRank(Rank rank) {
         this.rank = rank;
+
+        if (rank.has(null, Rank.Mod, false)) {
+            Player player = Bukkit.getServer().getPlayer(this.name);
+
+            this.addPerm(player, "nocheatplus.admin");
+        }
     }
 
     public long getCredits() {

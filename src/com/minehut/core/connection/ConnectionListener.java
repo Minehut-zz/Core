@@ -124,4 +124,8 @@ public class ConnectionListener implements Listener {
     public void onKick(PlayerKickEvent event) {
         this.playerInfos.remove(this.getPlayerInfo(event.getPlayer()));
     }
+
+    public ArrayList<PlayerInfo> getPlayerInfos() {
+        return playerInfos;
+    }
 }

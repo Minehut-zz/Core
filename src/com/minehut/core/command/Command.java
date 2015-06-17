@@ -17,10 +17,20 @@ import java.util.ArrayList;
 public abstract class Command implements Listener {
     private String name;
     private Rank rank;
+    private ArrayList<String> aliases;
 
     public Command(JavaPlugin plugin, String name, Rank rank) {
         this.name = name;
         this.rank = rank;
+        this.aliases = new ArrayList<>();
+
+        Bukkit.getServer().getPluginManager().registerEvents(this, plugin);
+    }
+
+    public Command(JavaPlugin plugin, String name, ArrayList<String> aliases, Rank rank) {
+        this.name = name;
+        this.rank = rank;
+        this.aliases = aliases;
 
         Bukkit.getServer().getPluginManager().registerEvents(this, plugin);
     }
@@ -39,15 +49,29 @@ public abstract class Command implements Listener {
         String cmd = args.get(0);
         args.remove(0);
 
-        if (!cmd.equalsIgnoreCase("/" + name)) return;
+        if (cmd.equalsIgnoreCase("/" + name)) {
+            //This is our command, make sure help msg doesn't show
+            event.setCancelled(true);
 
-        //This is our command, make sure help msg doesn't show
-        event.setCancelled(true);
+            if (!Core.getInstance().getPlayerInfo(player).getRank().has(player, rank, true)) return;
 
-        if (!Core.getInstance().getPlayerInfo(player).getRank().has(player, rank, true)) return;
+            if (!call(event.getPlayer(), args)) {
 
-        if (!call(event.getPlayer(), args)) {
+            }
+            return;
+        } else if (!this.aliases.isEmpty()) {
+            for (String alias : this.aliases) {
+                if (cmd.equalsIgnoreCase("/" + alias)) {
+                    event.setCancelled(true);
 
+                    if (!Core.getInstance().getPlayerInfo(player).getRank().has(player, rank, true)) return;
+
+                    if (!call(event.getPlayer(), args)) {
+
+                    }
+                    return;
+                }
+            }
         }
     }
 

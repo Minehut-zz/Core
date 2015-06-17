@@ -1,16 +1,25 @@
 package com.minehut.core;
 
+import com.minehut.commons.common.chat.C;
 import com.minehut.commons.common.chat.F;
+import com.minehut.commons.common.sound.S;
+import com.minehut.core.command.commands.CreditsCommand;
 import com.minehut.core.command.commands.RankSetCommand;
+import com.minehut.core.command.commands.SetCreditsCommand;
 import com.minehut.core.command.commands.UpdateCommand;
 import com.minehut.core.connection.ConnectionListener;
 import com.minehut.core.player.PlayerInfo;
 import com.minehut.core.player.Rank;
 import com.mongodb.*;
+import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
+import org.bukkit.permissions.PermissionAttachment;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 import java.util.UUID;
 
 /**
@@ -19,6 +28,9 @@ import java.util.UUID;
 public class Core extends JavaPlugin {
     private static Core instance;
     private ConnectionListener connectionListener;
+
+    /* Perms */
+    public final HashMap<UUID, PermissionAttachment> perms = new HashMap<UUID, PermissionAttachment>();
 
     /* Database */
     private MongoClient mongo;
@@ -37,6 +49,8 @@ public class Core extends JavaPlugin {
 
         /* Commands */
         new RankSetCommand(this);
+        new CreditsCommand(this);
+        new SetCreditsCommand(this);
 //        new UpdateCommand(this);
     }
 
@@ -50,6 +64,39 @@ public class Core extends JavaPlugin {
 
     public PlayerInfo getPlayerInfo(Player player) {
         return this.connectionListener.getPlayerInfo(player);
+    }
+
+    public ArrayList<PlayerInfo> getPlayersInfos() {
+        return this.connectionListener.getPlayerInfos();
+    }
+
+    public long addCredits(Player player, long amount) {
+        PlayerInfo playerInfo = getPlayerInfo(player);
+
+        DBObject query = new BasicDBObject("uuid", player.getUniqueId().toString());
+        DBObject found = playersCollection.findOne(query);
+
+        long oldCredits = (long) found.get("credits");
+        long updatedCredits = oldCredits + amount;
+
+        found.put("credits", updatedCredits);
+        playersCollection.findAndModify(query, found);
+
+        playerInfo.setCredits(updatedCredits);
+
+        return updatedCredits;
+    }
+
+    public long addCredits(Player player, long amount, String reason) {
+        if (amount > 0) {
+            player.sendMessage(C.green + "+" + amount + " credits" + C.gold + " | " + C.aqua + reason);
+            S.playSound(player, Sound.LEVEL_UP);
+        } else {
+            player.sendMessage(C.red + amount + " credits" + C.gold + " | " + C.aqua + reason);
+            S.playSound(player, Sound.LEVEL_UP);
+        }
+
+        return this.addCredits(player, amount);
     }
 
     public Rank getRank(UUID uuid) {
@@ -102,5 +149,9 @@ public class Core extends JavaPlugin {
 
     public DBCollection getPlayersCollection() {
         return playersCollection;
+    }
+
+    public HashMap<UUID, PermissionAttachment> getPerms() {
+        return perms;
     }
 }
