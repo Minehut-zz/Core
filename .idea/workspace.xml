@@ -7,15 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5dfaddc8-e8c5-4503-ba71-03a3c5838829" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/minehut/core/command/commands/CreditsCommand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/minehut/core/command/commands/SetCreditsCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Core/com/minehut/core/connection/ConnectionListener.class" afterPath="$PROJECT_DIR$/out/production/Core/com/minehut/core/connection/ConnectionListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Core/com/minehut/core/Core.class" afterPath="$PROJECT_DIR$/out/production/Core/com/minehut/core/Core.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Core/com/minehut/core/player/PlayerInfo.class" afterPath="$PROJECT_DIR$/out/production/Core/com/minehut/core/player/PlayerInfo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Core/com/minehut/core/command/Command.class" afterPath="$PROJECT_DIR$/out/production/Core/com/minehut/core/command/Command.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/minehut/core/command/Command.java" afterPath="$PROJECT_DIR$/src/com/minehut/core/command/Command.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/minehut/core/connection/ConnectionListener.java" afterPath="$PROJECT_DIR$/src/com/minehut/core/connection/ConnectionListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/minehut/core/Core.java" afterPath="$PROJECT_DIR$/src/com/minehut/core/Core.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/minehut/core/player/PlayerInfo.java" afterPath="$PROJECT_DIR$/src/com/minehut/core/player/PlayerInfo.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Core.iws" />
@@ -135,8 +128,8 @@
       <file leaf-file-name="Command.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/minehut/core/command/Command.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.75">
-              <caret line="60" column="19" selection-start-line="60" selection-start-column="19" selection-end-line="60" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.5147059">
+              <caret line="65" column="38" selection-start-line="65" selection-start-column="38" selection-end-line="65" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -229,8 +222,9 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -423,7 +417,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -580,7 +573,13 @@
       <option name="project" value="LOCAL" />
       <updated>1433288341307</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add aliases to Command">
+      <created>1434556277439</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1434556277439</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -630,7 +629,8 @@
     <MESSAGE value="Add rankset command" />
     <MESSAGE value="Add first join and recent login IPs to database" />
     <MESSAGE value="Update setrank command" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update setrank command" />
+    <MESSAGE value="Add aliases to Command" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add aliases to Command" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -702,6 +702,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -766,6 +767,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -830,6 +832,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -894,6 +897,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1016,6 +1020,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1107,8 +1112,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/minehut/core/command/Command.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.75">
-          <caret line="60" column="19" selection-start-line="60" selection-start-column="19" selection-end-line="60" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.5147059">
+          <caret line="65" column="38" selection-start-line="65" selection-start-column="38" selection-end-line="65" selection-end-column="38" />
           <folding />
         </state>
       </provider>

@@ -10,6 +10,7 @@ import org.bukkit.event.player.PlayerCommandPreprocessEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by luke on 5/31/15.
@@ -17,7 +18,7 @@ import java.util.ArrayList;
 public abstract class Command implements Listener {
     private String name;
     private Rank rank;
-    private ArrayList<String> aliases;
+    private List<String> aliases;
 
     public Command(JavaPlugin plugin, String name, Rank rank) {
         this.name = name;
@@ -27,7 +28,7 @@ public abstract class Command implements Listener {
         Bukkit.getServer().getPluginManager().registerEvents(this, plugin);
     }
 
-    public Command(JavaPlugin plugin, String name, ArrayList<String> aliases, Rank rank) {
+    public Command(JavaPlugin plugin, String name, List<String> aliases, Rank rank) {
         this.name = name;
         this.rank = rank;
         this.aliases = aliases;
