@@ -52,7 +52,7 @@ public class ConnectionListener implements Listener {
 
         if (found == null) {
             /* New Player */
-            storePlayer(player, player.getName(), "regular", 0);
+            storePlayer(player, "regular", 0);
 
             playerInfo.setRank(Rank.regular);
             playerInfo.setCredits(0);
@@ -89,10 +89,10 @@ public class ConnectionListener implements Listener {
         }
     }
 
-    private void storePlayer(Player player, String name, String rank, long credits) {
+    private void storePlayer(Player player, String rank, long credits) {
         UUID uuid = player.getUniqueId();
         DBObject obj = new BasicDBObject("uuid", uuid.toString());
-        obj.put("name", name);
+        obj.put("name", player.getName());
         obj.put("rank", rank);
         obj.put("credits", credits);
 

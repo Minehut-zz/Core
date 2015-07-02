@@ -66,7 +66,6 @@ public enum Rank {
                 return rank;
             }
         }
-        F.log("Couldn't find rank: " + s);
         return Rank.regular;
     }
 }

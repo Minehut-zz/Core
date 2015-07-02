@@ -34,7 +34,7 @@ public class CreditsCommand extends Command {
 
         long credits = Core.getInstance().getPlayerInfo(player).getCredits();
 
-        F.message(player, "Minehut", "You have " + C.green + credits + C.white + " credits");
+        F.message(player, "You have " + C.green + credits + C.white + " credits");
 
         return false;
     }

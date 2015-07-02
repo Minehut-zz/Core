@@ -10,6 +10,7 @@ import com.minehut.core.command.commands.UpdateCommand;
 import com.minehut.core.connection.ConnectionListener;
 import com.minehut.core.player.PlayerInfo;
 import com.minehut.core.player.Rank;
+import com.minehut.core.status.StatusManager;
 import com.mongodb.*;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
@@ -28,6 +29,7 @@ import java.util.UUID;
 public class Core extends JavaPlugin {
     private static Core instance;
     private ConnectionListener connectionListener;
+    private StatusManager statusManager;
 
     /* Perms */
     public final HashMap<UUID, PermissionAttachment> perms = new HashMap<UUID, PermissionAttachment>();
@@ -46,12 +48,13 @@ public class Core extends JavaPlugin {
         this.connect();
 
         this.connectionListener = new ConnectionListener(this);
+        this.statusManager = new StatusManager(this);
 
         /* Commands */
         new RankSetCommand(this);
         new CreditsCommand(this);
         new SetCreditsCommand(this);
-//        new UpdateCommand(this);
+        new UpdateCommand(this);
     }
 
     public static void registerListener(Listener listener) {

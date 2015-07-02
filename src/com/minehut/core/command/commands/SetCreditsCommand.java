@@ -9,6 +9,7 @@ import com.minehut.core.player.PlayerInfo;
 import com.minehut.core.player.Rank;
 import com.minehut.core.util.UUIDFetcher;
 import com.mongodb.BasicDBObject;
+import com.mongodb.DBCursor;
 import com.mongodb.DBObject;
 import org.bukkit.Bukkit;
 import org.bukkit.Sound;
@@ -26,14 +27,48 @@ import java.util.UUID;
 public class SetCreditsCommand extends Command {
 
     public SetCreditsCommand(JavaPlugin plugin) {
-        super(plugin, "cred", Rank.Admin);
+        super(plugin, "cred", Arrays.asList("creds"), Rank.Admin);
     }
 
     @Override
     public boolean call(Player player, ArrayList<String> args) {
 
-        if (args.size() != 3) {
-            player.sendMessage(C.red + "/cred (add/set) (name) (amount)");
+        if (args.size() == 2) {
+            if (args.get(0).equalsIgnoreCase("giveall")) {
+                DBCursor curs = Core.getInstance().getPlayersCollection().find();
+
+                int i = 1;
+                while (curs.hasNext()) {
+                    DBObject found = curs.next();
+
+                    DBObject query = new BasicDBObject("uuid", found.get("uuid"));
+
+                    long updatedCredits = (long) found.get("credits") + Long.parseLong(args.get(1));
+
+                    found.put("credits", updatedCredits);
+
+                    Player updatedPlayer = Bukkit.getServer().getPlayer((String) found.get("uuid"));
+
+                    if(updatedPlayer != null) {
+                        PlayerInfo playerInfo = Core.getInstance().getPlayerInfo(updatedPlayer);
+                        playerInfo.setCredits(updatedCredits);
+                        updatedPlayer.sendMessage("");
+                        F.message(updatedPlayer, "You have been given " + C.green + args.get(1) + " credits");
+                        updatedPlayer.sendMessage("");
+                        S.playSound(updatedPlayer, Sound.LEVEL_UP);
+                    }
+
+                }
+
+                player.sendMessage("");
+                F.message(player, "You have given everyone " + C.green + args.get(1) + " credits");
+                player.sendMessage("");
+                S.playSound(player, Sound.LEVEL_UP);
+                return true;
+            }
+        }
+        else if (args.size() != 3) {
+            player.sendMessage(C.red + "/creds (add/set/giveall) (name) (amount)");
             return true;
         }
 
