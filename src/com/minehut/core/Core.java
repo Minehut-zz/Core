@@ -3,14 +3,12 @@ package com.minehut.core;
 import com.minehut.commons.common.chat.C;
 import com.minehut.commons.common.chat.F;
 import com.minehut.commons.common.sound.S;
-import com.minehut.core.command.commands.CreditsCommand;
-import com.minehut.core.command.commands.RankSetCommand;
-import com.minehut.core.command.commands.SetCreditsCommand;
-import com.minehut.core.command.commands.UpdateCommand;
+import com.minehut.core.command.commands.*;
 import com.minehut.core.connection.ConnectionListener;
 import com.minehut.core.player.PlayerInfo;
 import com.minehut.core.player.Rank;
 import com.minehut.core.status.StatusManager;
+import com.minehut.core.status.menu.ServerMenuManager;
 import com.mongodb.*;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
@@ -44,6 +42,7 @@ public class Core extends JavaPlugin {
     @Override
     public void onEnable() {
         this.instance = this;
+        this.getServer().getMessenger().registerOutgoingPluginChannel(this, "BungeeCord");
 
         this.connect();
 
@@ -55,6 +54,8 @@ public class Core extends JavaPlugin {
         new CreditsCommand(this);
         new SetCreditsCommand(this);
         new UpdateCommand(this);
+        new ServersCommand(this);
+
     }
 
     public static void registerListener(Listener listener) {
@@ -156,5 +157,9 @@ public class Core extends JavaPlugin {
 
     public HashMap<UUID, PermissionAttachment> getPerms() {
         return perms;
+    }
+
+    public StatusManager getStatusManager() {
+        return statusManager;
     }
 }

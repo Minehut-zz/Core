@@ -43,27 +43,41 @@ public class StatusDownloader {
         while (cursor.hasNext()) {
             DBObject found = cursor.next();
 
-            String name = (String) found.get("name");
-            String type = (String) found.get("type");
-            String bungee = (String) found.get("bungee");
-            String ip = (String) found.get("ip");
-            int port = (int) found.get("port");
-            int playersOnline = (int) found.get("playersOnline");
-            int maxPlayers = (int) found.get("maxPlayers");
             long lastOnline = (long) found.get("lastOnline");
+            if(isOnline(lastOnline)) {
 
-            if (type.equalsIgnoreCase("kingdom")) {
-                String rank = (String) found.get("rank");
-                String motd = (String) found.get("motd");
+                String name = (String) found.get("name");
+                String type = (String) found.get("type");
+                String bungee = (String) found.get("bungee");
+                String ip = (String) found.get("ip");
+                int port = (int) found.get("port");
+                int playersOnline = (int) found.get("playersOnline");
+                int maxPlayers = (int) found.get("maxPlayers");
 
-                ServerInfo serverInfo = new ServerInfo(name, type, bungee, ip, port, playersOnline, maxPlayers, lastOnline, true, rank, motd);
-                this.servers.add(serverInfo);
-                F.log("Found Kingdom Server: " + name);
-            } else {
-                ServerInfo serverInfo = new ServerInfo(name, type, bungee, ip, port, playersOnline, maxPlayers, lastOnline);
-                this.servers.add(serverInfo);
-                F.log("Found Server: " + name);
+                if (type.equalsIgnoreCase("kingdom")) {
+                    String rank = (String) found.get("rank");
+                    String motd = (String) found.get("motd");
+
+                    ServerInfo serverInfo = new ServerInfo(name, type, bungee, ip, port, playersOnline, maxPlayers, lastOnline, true, rank, motd);
+                    this.servers.add(serverInfo);
+                } else {
+                    ServerInfo serverInfo = new ServerInfo(name, type, bungee, ip, port, playersOnline, maxPlayers, lastOnline);
+                    this.servers.add(serverInfo);
+                }
             }
         }
+    }
+
+    public boolean isOnline(long lastOnline) {
+        long calculated = (System.currentTimeMillis() - lastOnline) / 1000;
+        if (calculated <= 3) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public ArrayList<ServerInfo> getServers() {
+        return servers;
     }
 }

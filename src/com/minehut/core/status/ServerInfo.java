@@ -84,6 +84,14 @@ public class ServerInfo {
         return kingdom;
     }
 
+    public Rank getRank() {
+        return rank;
+    }
+
+    public String getMotd() {
+        return motd;
+    }
+
     public long getLastOnline() {
         return lastOnline;
     }
