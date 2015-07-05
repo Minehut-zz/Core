@@ -1,11 +1,11 @@
 package com.minehut.core.status.menu;
 
-import com.minehut.commons.common.bungee.Bungee;
-import com.minehut.commons.common.chat.C;
-import com.minehut.commons.common.chat.F;
-import com.minehut.commons.common.items.EnchantGlow;
-import com.minehut.commons.common.items.ItemStackFactory;
-import com.minehut.commons.common.sound.S;
+import com.minehut.core.util.common.bungee.Bungee;
+import com.minehut.core.util.common.chat.C;
+import com.minehut.core.util.common.chat.F;
+import com.minehut.core.util.common.items.EnchantGlow;
+import com.minehut.core.util.common.items.ItemStackFactory;
+import com.minehut.core.util.common.sound.S;
 import com.minehut.core.Core;
 import com.minehut.core.player.Rank;
 import com.minehut.core.status.ServerInfo;
@@ -126,13 +126,13 @@ public class ServerCluster implements Listener {
                 for (int i = 0; i < 45; i++) {
                     this.inv.setItem(i, ItemStackFactory.createItem(Material.BARRIER,
                             C.red + "No Servers",
-                            Arrays.asList("", C.red + "There are currently no " + this.serverType.toUpperCase() + " servers online.", "")));
+                            Arrays.asList("", C.red + "There are currently no servers online.", "")));
                 }
             } else {
                 for (int i = 0; i < 9; i++) {
                     this.inv.setItem(i, ItemStackFactory.createItem(Material.BARRIER,
                             C.red + "No Servers",
-                            Arrays.asList("", C.red + "There are currently no " + this.serverType.toUpperCase() + " servers online.", "")));
+                            Arrays.asList("", C.red + "There are currently no servers online.", "")));
                 }
             }
         }
@@ -156,7 +156,9 @@ public class ServerCluster implements Listener {
                     serverInfo.getName(),
                     Arrays.asList(
                             "",
+                            C.gray + "Name: " + C.yellow + serverInfo.getName(),
                             C.gray + "Type: " + C.yellow + serverInfo.getType().toUpperCase(),
+                            "",
                             C.gray + "Players: " + C.yellow + serverInfo.getPlayersOnline() + "/" + serverInfo.getMaxPlayers(),
                             ""
                     ));

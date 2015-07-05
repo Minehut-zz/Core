@@ -1,12 +1,12 @@
 package com.minehut.core.status.menu;
 
-import com.minehut.commons.common.chat.C;
-import com.minehut.commons.common.chat.F;
-import com.minehut.commons.common.items.ItemStackFactory;
-import com.minehut.commons.common.sound.S;
 import com.minehut.core.Core;
 import com.minehut.core.status.download.StatusDownloader;
 import com.minehut.core.util.EventUtils;
+import com.minehut.core.util.common.chat.C;
+import com.minehut.core.util.common.chat.F;
+import com.minehut.core.util.common.items.ItemStackFactory;
+import com.minehut.core.util.common.sound.S;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.Sound;
@@ -51,7 +51,22 @@ public class ServerMenuManager implements Listener {
                         ""
                 ),
                 true,
-                4
+                3
+        ));
+
+        this.clusters.add(new ServerCluster(this, "featuredKingdom",
+                Material.ENDER_CHEST,
+                C.aqua + C.bold + "FEATURED " + C.yellow + C.bold + "Kingdom Servers",
+                Arrays.asList(
+                        "",
+                        C.gray + "Staff picked Kingdoms",
+                        C.gray + "that go above and beyond",
+                        C.gray + "to create fun, original",
+                        C.gray + "gameplay here on Minehut.",
+                        ""
+                ),
+                true,
+                5
         ));
 
         this.clusters.add(new ServerCluster(this, "tnt",
@@ -75,7 +90,7 @@ public class ServerMenuManager implements Listener {
                         "",
                         C.gray + "Fight with your team to",
                         C.gray + "destroy the wool core located",
-                        C.gray + "at the enemies base.",
+                        C.gray + "at the enemy base.",
                         C.gray + "Features a full set of",
                         C.gray + "custom kits to unlock.",
                         ""
@@ -113,18 +128,20 @@ public class ServerMenuManager implements Listener {
                 true
         ));
 
-        this.clusters.add(new ServerCluster(this, "Coming Soon",
-                Material.BEDROCK,
-                C.red + C.scramble + "lkdjslkjflskdjfs",
+        this.clusters.add(new ServerCluster(this, "ctf",
+                Material.BANNER,
+                C.yellow + "Capture the Flag",
                 Arrays.asList(
                         "",
-                        C.gray + "Coming Soon!",
+                        C.gray + "Capture the enemy team's",
+                        C.gray + "flag and bring it to your",
+                        C.gray + "base to win the game.",
                         ""
                 ),
                 false,
                 37,
                 true,
-                false
+                true
         ));
 
         this.clusters.add(new ServerCluster(this, "Coming Soon",

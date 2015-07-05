@@ -1,6 +1,6 @@
 package com.minehut.core.util;
 
-import com.minehut.commons.common.chat.F;
+import com.minehut.core.util.common.chat.F;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 

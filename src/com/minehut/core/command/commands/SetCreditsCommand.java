@@ -1,8 +1,8 @@
 package com.minehut.core.command.commands;
 
-import com.minehut.commons.common.chat.C;
-import com.minehut.commons.common.chat.F;
-import com.minehut.commons.common.sound.S;
+import com.minehut.core.util.common.chat.C;
+import com.minehut.core.util.common.chat.F;
+import com.minehut.core.util.common.sound.S;
 import com.minehut.core.Core;
 import com.minehut.core.command.Command;
 import com.minehut.core.player.PlayerInfo;

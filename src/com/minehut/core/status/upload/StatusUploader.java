@@ -1,7 +1,7 @@
 package com.minehut.core.status.upload;
 
-import com.minehut.commons.common.chat.C;
-import com.minehut.commons.common.chat.F;
+import com.minehut.core.util.common.chat.C;
+import com.minehut.core.util.common.chat.F;
 import com.minehut.core.Core;
 import com.minehut.core.status.ServerInfo;
 import com.minehut.core.util.StatusUtils;

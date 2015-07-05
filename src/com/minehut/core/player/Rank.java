@@ -1,7 +1,6 @@
 package com.minehut.core.player;
 
-import com.minehut.commons.common.chat.C;
-import com.minehut.commons.common.chat.F;
+import com.minehut.core.util.common.chat.C;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 

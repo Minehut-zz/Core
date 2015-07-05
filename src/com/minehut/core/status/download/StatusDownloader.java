@@ -1,6 +1,6 @@
 package com.minehut.core.status.download;
 
-import com.minehut.commons.common.chat.F;
+import com.minehut.core.util.common.chat.F;
 import com.minehut.core.Core;
 import com.minehut.core.player.Rank;
 import com.minehut.core.status.ServerInfo;
