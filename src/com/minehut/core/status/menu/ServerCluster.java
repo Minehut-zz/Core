@@ -10,8 +10,10 @@ import com.minehut.core.Core;
 import com.minehut.core.player.Rank;
 import com.minehut.core.status.ServerInfo;
 import com.minehut.core.status.download.StatusDownloader;
+import net.md_5.bungee.api.ChatColor;
 import org.apache.logging.log4j.core.jmx.Server;
 import org.bukkit.Bukkit;
+import org.bukkit.DyeColor;
 import org.bukkit.Material;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
@@ -36,8 +38,13 @@ public class ServerCluster implements Listener {
     public List<String> desc;
     public Material material;
     public ArrayList<ServerInfo> servers;
+
     public boolean kingdoms;
+    public boolean featuredKingdom;
+
     public int slot;
+
+    public String invName;
 
     public boolean comingSoon;
     public boolean showName;
@@ -45,22 +52,37 @@ public class ServerCluster implements Listener {
     private Inventory inv;
     private int runnableID = -1;
 
-    public ServerCluster(ServerMenuManager serverMenuManager, String serverType, Material material, String name, List<String> desc, boolean kingdoms, int slot) {
+    public ServerCluster(ServerMenuManager serverMenuManager, String serverType, Material material, String name, List<String> desc, boolean kingdoms, boolean featuredKingdom, int slot) {
         this.servers = new ArrayList<>();
         this.serverMenuManager = serverMenuManager;
 
         this.serverType = serverType;
         this.material = material;
+
         this.name = name;
+        this.invName = C.underline + ChatColor.stripColor(name);
+
         this.desc = desc;
         this.kingdoms = kingdoms;
         this.slot = slot;
         this.comingSoon = false;
+        this.featuredKingdom = featuredKingdom;
 
         if(this.kingdoms) {
-            this.inv = Bukkit.getServer().createInventory(null, 54, this.name);
+
+            F.debug(C.logDivider);
+            F.debug(C.logDivider);
+            if(featuredKingdom) {
+                F.log("Created FEATURED kingdom cluster. name: " + name);
+            } else {
+                F.log("Created non-featured kingdom cluster. name: " + name);
+            }
+            F.debug(C.logDivider);
+            F.debug(C.logDivider);
+
+            this.inv = Bukkit.getServer().createInventory(null, 54, this.invName);
         } else {
-            this.inv = Bukkit.getServer().createInventory(null, 18, this.name);
+            this.inv = Bukkit.getServer().createInventory(null, 18, this.invName);
         }
         this.runnableID = this.continuousRefresh();
 
@@ -68,24 +90,29 @@ public class ServerCluster implements Listener {
         Bukkit.getServer().getPluginManager().registerEvents(this, Core.getInstance());
     }
 
-    public ServerCluster(ServerMenuManager serverMenuManager, String serverType, Material material, String name, List<String> desc, boolean kingdoms, int slot, boolean comingSoon, boolean showName) {
+    public ServerCluster(ServerMenuManager serverMenuManager, String serverType, Material material, String name, List<String> desc, boolean kingdoms, boolean featuredKingdom, int slot, boolean comingSoon, boolean showName) {
         this.servers = new ArrayList<>();
         this.serverMenuManager = serverMenuManager;
 
         this.serverType = serverType;
         this.material = material;
+
+
         this.name = name;
+        this.invName = C.underline + ChatColor.stripColor(name);
+
         this.desc = desc;
         this.kingdoms = kingdoms;
         this.slot = slot;
         this.comingSoon = comingSoon;
         this.showName = showName;
+        this.featuredKingdom = featuredKingdom;
 
         if(!comingSoon) {
             if (this.kingdoms) {
-                this.inv = Bukkit.getServer().createInventory(null, 54, this.name);
+                this.inv = Bukkit.getServer().createInventory(null, 54, this.invName);
             } else {
-                this.inv = Bukkit.getServer().createInventory(null, 18, this.name);
+                this.inv = Bukkit.getServer().createInventory(null, 18, this.invName);
             }
             this.runnableID = this.continuousRefresh();
 
@@ -116,11 +143,24 @@ public class ServerCluster implements Listener {
         this.inv.clear();
 
         if(!this.servers.isEmpty()) {
-            int i = 0;
-            for (ServerInfo serverInfo : this.servers) {
-                this.inv.setItem(i, this.getIcon(serverInfo));
-                i++;
+
+            if(this.kingdoms) {
+
+                for (int i = 0; i < 54; i++) {
+
+                    if (this.servers.size() - 1 < i) {
+                        break;
+                    }
+
+                    this.inv.setItem(i, this.getIcon(this.servers.get(i)));
+                }
+            } else {
+                /* Game Server */
+                for (int i = 0; i < this.servers.size(); i++) {
+                    this.inv.setItem(i, this.getIcon(this.servers.get(i)));
+                }
             }
+
         } else {
             if(this.kingdoms) {
                 for (int i = 0; i < 45; i++) {
@@ -152,28 +192,41 @@ public class ServerCluster implements Listener {
 
     private ItemStack getIcon(ServerInfo serverInfo) {
         if (!serverInfo.isKingdom()) {
-            ItemStack itemStack = ItemStackFactory.createItem(Material.EMERALD_BLOCK,
-                    serverInfo.getName(),
+            /* Game Server */
+            ItemStack itemStack = ItemStackFactory.createDye(serverInfo.getName(),
+                    10, //10 = green
                     Arrays.asList(
                             "",
-                            C.gray + "Name: " + C.yellow + serverInfo.getName(),
-                            C.gray + "Type: " + C.yellow + serverInfo.getType().toUpperCase(),
+                            C.gray + "Name: " + C.aqua + serverInfo.getName(),
                             "",
                             C.gray + "Players: " + C.yellow + serverInfo.getPlayersOnline() + "/" + serverInfo.getMaxPlayers(),
                             ""
                     ));
             return itemStack;
         } else {
-            ItemStack itemStack = ItemStackFactory.createItem(Material.EMERALD_BLOCK,
-                    serverInfo.getName(),
-                    Arrays.asList(
-                            "",
-                            C.gray + "Name: " + C.yellow + serverInfo.getName(),
-                            C.gray + "Players: " + C.yellow + serverInfo.getPlayersOnline() + "/" + serverInfo.getMaxPlayers(),
-                            "",
-                            C.gray + "MOTD: " + C.yellow + serverInfo.getMotd(),
-                            ""
-                    ));
+            /* Kingdom Server */
+            ItemStack itemStack;
+            if(serverInfo.getRank().has(null, Rank.Mega, false)) {
+                itemStack = ItemStackFactory.createItem(Material.SIGN,
+                        ChatColor.stripColor(serverInfo.getKingdomName()),
+                        Arrays.asList(
+                                "",
+                                C.gray + "Name: " + C.yellow + serverInfo.getKingdomName(),
+                                C.gray + "Players: " + C.yellow + serverInfo.getPlayersOnline() + "/" + serverInfo.getMaxPlayers(),
+                                "",
+                                C.gray + "MOTD: " + C.yellow + serverInfo.getMotd(),
+                                ""
+                        ));
+            } else {
+                itemStack = ItemStackFactory.createItem(Material.SIGN,
+                        ChatColor.stripColor(serverInfo.getKingdomName()),
+                        Arrays.asList(
+                                "",
+                                C.gray + "Name: " + C.yellow + serverInfo.getKingdomName(),
+                                C.gray + "Players: " + C.yellow + serverInfo.getPlayersOnline() + "/" + serverInfo.getMaxPlayers(),
+                                ""
+                        ));
+            }
             if (serverInfo.getRank().has(null, Rank.Mega, false)) {
                 EnchantGlow.addGlow(itemStack);
             }
@@ -185,14 +238,32 @@ public class ServerCluster implements Listener {
         this.servers = new ArrayList<>();
         for (ServerInfo serverInfo : unsortedServers) {
             if (serverInfo.getType().equalsIgnoreCase(this.serverType)) {
-                this.servers.add(serverInfo);
+
+                if (this.kingdoms) {
+                    if (this.featuredKingdom) {
+                        if (serverInfo.isFeatured()) {
+//                            F.log("Added Featured Kingdom to cluster");
+                            this.servers.add(serverInfo);
+                        } else {
+//                            F.log("Cluster says Kingdom " + serverInfo.getKingdomName() + " is not featured");
+                        }
+                    } else {
+//                        F.log("In sort servers, cluster wasn't featured: " + name);
+                        if (!serverInfo.isFeatured()) {
+                            this.servers.add(serverInfo);
+                        }
+                    }
+                } else {
+                    this.servers.add(serverInfo);
+                }
+
             }
         }
     }
 
     @EventHandler
     public void onInventoryClick(InventoryClickEvent event) {
-        if (event.getInventory().getName().equalsIgnoreCase(this.getName())) {
+        if (event.getInventory().getName().equalsIgnoreCase(this.invName)) {
             event.setCancelled(true);
             S.click((Player) event.getWhoClicked());
             if(event.getCurrentItem() != null) {
@@ -200,8 +271,13 @@ public class ServerCluster implements Listener {
                     if (event.getCurrentItem().getItemMeta().getDisplayName() != null) {
                         ServerInfo serverInfo = this.getServerInfo(event.getCurrentItem().getItemMeta().getDisplayName());
                         if (serverInfo != null) {
-                            F.message((Player) event.getWhoClicked(), "Sending you to " + C.green + serverInfo.getName());
-                            Bungee.sendToServer(Core.getInstance(), (Player) event.getWhoClicked(), serverInfo.getBungee());
+                            if (serverInfo.isKingdom()) {
+                                F.message((Player) event.getWhoClicked(), "Sending you to " + C.green + serverInfo.getKingdomName());
+                                Bungee.sendToServer(Core.getInstance(), (Player) event.getWhoClicked(), serverInfo.getBungee());
+                            } else {
+                                F.message((Player) event.getWhoClicked(), "Sending you to " + C.green + serverInfo.getName());
+                                Bungee.sendToServer(Core.getInstance(), (Player) event.getWhoClicked(), serverInfo.getBungee());
+                            }
                         }
 
                         else if (event.getCurrentItem().getType() == Material.ARROW) {
@@ -215,8 +291,14 @@ public class ServerCluster implements Listener {
 
     public ServerInfo getServerInfo(String name) {
         for (ServerInfo serverInfo : this.servers) {
-            if (serverInfo.getName().equalsIgnoreCase(name)) {
-                return serverInfo;
+            if (this.kingdoms) {
+                if (serverInfo.getKingdomName().equalsIgnoreCase(name)) {
+                    return serverInfo;
+                }
+            } else {
+                if (serverInfo.getName().equalsIgnoreCase(name)) {
+                    return serverInfo;
+                }
             }
         }
         return null;

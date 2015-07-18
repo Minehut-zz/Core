@@ -2,4 +2,3 @@ name: Core
 main: com.minehut.core.Core
 author: Minehut
 version: 1.0
-depend: [Commons]

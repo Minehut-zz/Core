@@ -1,5 +1,7 @@
 package com.minehut.core;
 
+import com.minehut.core.command.bannedCommandManager.BannedCommandManager;
+import com.minehut.core.rules.RuleManager;
 import com.minehut.core.util.common.chat.C;
 import com.minehut.core.util.common.chat.F;
 import com.minehut.core.util.common.sound.S;
@@ -55,6 +57,13 @@ public class Core extends JavaPlugin {
         new SetCreditsCommand(this);
         new UpdateCommand(this);
         new ServersCommand(this);
+
+        if (this.statusManager.getStatusUploader().isUploading()) {
+            /* Not a Kingdom */
+            new BannedCommandManager(this);
+            new PluginsCommand(this);
+            new RuleManager(this);
+        }
 
     }
 
@@ -124,6 +133,7 @@ public class Core extends JavaPlugin {
         try {
             this.mongo = new MongoClient("localhost", 27017);
             this.db = mongo.getDB("minehut");
+            db.addOption(Bytes.QUERYOPTION_NOTIMEOUT);
             this.playersCollection = db.getCollection("players");
 
             if (this.db == null) {
@@ -161,5 +171,9 @@ public class Core extends JavaPlugin {
 
     public StatusManager getStatusManager() {
         return statusManager;
+    }
+
+    public ConnectionListener getConnectionListener() {
+        return connectionListener;
     }
 }

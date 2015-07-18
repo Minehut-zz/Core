@@ -57,8 +57,10 @@ public class StatusDownloader {
                 if (type.equalsIgnoreCase("kingdom")) {
                     String rank = (String) found.get("rank");
                     String motd = (String) found.get("motd");
+                    String kingdomName = (String) found.get("kingdomName");
+                    Boolean featured = (Boolean) found.get("featured");
 
-                    ServerInfo serverInfo = new ServerInfo(name, type, bungee, ip, port, playersOnline, maxPlayers, lastOnline, true, rank, motd);
+                    ServerInfo serverInfo = new ServerInfo(name, type, bungee, ip, port, playersOnline, maxPlayers, lastOnline, kingdomName, rank, motd, featured);
                     this.servers.add(serverInfo);
                 } else {
                     ServerInfo serverInfo = new ServerInfo(name, type, bungee, ip, port, playersOnline, maxPlayers, lastOnline);
@@ -70,7 +72,7 @@ public class StatusDownloader {
 
     public boolean isOnline(long lastOnline) {
         long calculated = (System.currentTimeMillis() - lastOnline) / 1000;
-        if (calculated <= 3) {
+        if (calculated <= 5) {
             return true;
         } else {
             return false;

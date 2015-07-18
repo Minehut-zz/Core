@@ -10,6 +10,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.LeatherArmorMeta;
 import org.bukkit.inventory.meta.SkullMeta;
+import org.bukkit.material.Dye;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -26,6 +27,14 @@ public class ItemStackFactory {
 
     public static ItemStack createItem(String name, String lore, Material material) {
         return createItem(name, lore, material, 1);
+    }
+
+    public static ItemStack createDye(String name, int data, List<String> lore) {
+        ItemStack itemStack = createItem(Material.INK_SACK, name, lore, 1);
+
+        itemStack.setDurability((short) data);
+
+        return itemStack;
     }
     
     public static ItemStack createItem(Material material, String name, List<String> lore) {

@@ -4,6 +4,7 @@ import com.minehut.core.Core;
 import com.minehut.core.connection.event.AsyncPlayerInfoInitiatedEvent;
 import com.minehut.core.player.PlayerInfo;
 import com.minehut.core.player.Rank;
+import com.minehut.core.util.common.chat.C;
 import com.mongodb.*;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;

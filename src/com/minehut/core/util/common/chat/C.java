@@ -92,6 +92,9 @@ public class C {
 
 	public static String logDivider = "###################################";
 
+	public static String messagePrefix = C.blue + " * ";
+	public static String broadcastPrefix = C.blue + " > ";
+
 	public static String center(String s)
 	{
 		int le = ( 70 - s.length() ) / 2;

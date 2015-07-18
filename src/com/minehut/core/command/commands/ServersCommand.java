@@ -19,7 +19,7 @@ import java.util.Arrays;
 public class ServersCommand extends Command {
 
     public ServersCommand(JavaPlugin plugin) {
-        super(plugin, "j", Rank.regular);
+        super(plugin, "menu", Rank.regular);
     }
 
     @Override

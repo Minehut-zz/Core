@@ -5,6 +5,7 @@ import com.minehut.core.player.Rank;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerCommandPreprocessEvent;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -36,7 +37,7 @@ public abstract class Command implements Listener {
         Bukkit.getServer().getPluginManager().registerEvents(this, plugin);
     }
 
-    @EventHandler
+    @EventHandler(priority = EventPriority.LOW)
     public void onCommand(PlayerCommandPreprocessEvent event) {
         Player player = event.getPlayer();
         ArrayList<String> args = new ArrayList<String>();

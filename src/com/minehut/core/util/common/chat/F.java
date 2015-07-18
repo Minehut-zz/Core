@@ -99,7 +99,7 @@ public class F {
 	}
 
 	public static void message(Player player, String message) {
-		player.sendMessage(C.blue + " > " + message);
+		player.sendMessage(C.blue + " > " + C.yellow + message);
 	}
 
 	public static void log(String message) {

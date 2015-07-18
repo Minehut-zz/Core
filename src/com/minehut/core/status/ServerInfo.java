@@ -17,8 +17,10 @@ public class ServerInfo {
     private long lastOnline;
 
     private boolean kingdom;
+    private String kingdomName;
     private Rank rank;
     private String motd;
+    private boolean featured;
 
     public ServerInfo(String name, String type, String bungee, String ip, int port, int players, int maxPlayers, long lastOnline) {
         this.name = name;
@@ -29,6 +31,7 @@ public class ServerInfo {
         this.lastOnline = lastOnline;
 
         this.kingdom = false;
+        this.kingdomName = "";
         this.rank = null;
         this.motd = "";
 
@@ -36,7 +39,7 @@ public class ServerInfo {
         this.maxPlayers = maxPlayers;
     }
 
-    public ServerInfo(String name, String type, String bungee, String ip, int port, int players, int maxPlayers, long lastOnline, boolean kingdom, String rank, String motd) {
+    public ServerInfo(String name, String type, String bungee, String ip, int port, int players, int maxPlayers, long lastOnline, String kingdomName, String rank, String motd, boolean featured) {
         this.name = name;
         this.type = type;
         this.bungee = bungee;
@@ -44,9 +47,11 @@ public class ServerInfo {
         this.port = port;
         this.lastOnline = lastOnline;
 
-        this.kingdom = kingdom;
+        this.kingdom = true;
+        this.kingdomName = kingdomName;
         this.rank = Rank.getRank(rank);
         this.motd = motd;
+        this.featured = featured;
 
         this.playersOnline = players;
         this.maxPlayers = maxPlayers;
@@ -58,6 +63,10 @@ public class ServerInfo {
 
     public String getBungee() {
         return bungee;
+    }
+
+    public String getKingdomName() {
+        return kingdomName;
     }
 
     public String getIp() {
@@ -94,5 +103,9 @@ public class ServerInfo {
 
     public long getLastOnline() {
         return lastOnline;
+    }
+
+    public boolean isFeatured() {
+        return featured;
     }
 }

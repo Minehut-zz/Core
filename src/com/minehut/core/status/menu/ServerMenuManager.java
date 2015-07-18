@@ -1,8 +1,10 @@
 package com.minehut.core.status.menu;
 
 import com.minehut.core.Core;
+import com.minehut.core.status.ServerInfo;
 import com.minehut.core.status.download.StatusDownloader;
 import com.minehut.core.util.EventUtils;
+import com.minehut.core.util.common.bungee.Bungee;
 import com.minehut.core.util.common.chat.C;
 import com.minehut.core.util.common.chat.F;
 import com.minehut.core.util.common.items.ItemStackFactory;
@@ -51,10 +53,11 @@ public class ServerMenuManager implements Listener {
                         ""
                 ),
                 true,
+                false,
                 3
         ));
 
-        this.clusters.add(new ServerCluster(this, "featuredKingdom",
+        this.clusters.add(new ServerCluster(this, "kingdom",
                 Material.ENDER_CHEST,
                 C.aqua + C.bold + "FEATURED " + C.yellow + C.bold + "Kingdom Servers",
                 Arrays.asList(
@@ -66,12 +69,13 @@ public class ServerMenuManager implements Listener {
                         ""
                 ),
                 true,
+                true,
                 5
         ));
 
         this.clusters.add(new ServerCluster(this, "tnt",
                 Material.TNT,
-                C.yellow + "TNT Wars",
+                C.yellow    + "TNT Wars",
                 Arrays.asList(
                         "",
                         C.gray + "Create cannons and ",
@@ -79,6 +83,7 @@ public class ServerMenuManager implements Listener {
                         C.gray + "until their lives run out.",
                         ""
                 ),
+                false,
                 false,
                 19
         ));
@@ -96,6 +101,7 @@ public class ServerMenuManager implements Listener {
                         ""
                 ),
                 false,
+                false,
                 22
         ));
 
@@ -111,10 +117,11 @@ public class ServerMenuManager implements Listener {
                         ""
                 ),
                 false,
+                false,
                 25
         ));
 
-        this.clusters.add(new ServerCluster(this, "Arcade",
+        this.clusters.add(new ServerCluster(this, "arcade",
                 Material.FIREWORK,
                 C.yellow + "Arcade",
                 Arrays.asList(
@@ -122,6 +129,7 @@ public class ServerMenuManager implements Listener {
                         C.gray + "Rotate through fun minigames!",
                         ""
                 ),
+                false,
                 false,
                 40,
                 true,
@@ -139,22 +147,26 @@ public class ServerMenuManager implements Listener {
                         ""
                 ),
                 false,
+                false,
                 37,
                 true,
                 true
         ));
 
-        this.clusters.add(new ServerCluster(this, "Coming Soon",
-                Material.BEDROCK,
-                C.red + C.scramble + "lkdjslkjflskdjfs",
+        this.clusters.add(new ServerCluster(this, "beta",
+                Material.BONE,
+                C.red + "Beta Servers",
                 Arrays.asList(
                         "",
-                        C.gray + "Coming Soon!",
+                        C.gray + "Servers that are still",
+                        C.gray + "in their development phase",
+                        C.gray + "and are prone to many bugs.",
                         ""
                 ),
                 false,
+                false,
                 43,
-                true,
+                false,
                 false
         ));
 
