@@ -55,8 +55,9 @@ public class Core extends JavaPlugin {
         new RankSetCommand(this);
         new CreditsCommand(this);
         new SetCreditsCommand(this);
-        new UpdateCommand(this);
+//        new UpdateCommand(this);
         new ServersCommand(this);
+        new ChunkCommand(this);
 
         if (this.statusManager.getStatusUploader().isUploading()) {
             /* Not a Kingdom */
@@ -131,7 +132,7 @@ public class Core extends JavaPlugin {
 
     private void connect() {
         try {
-            this.mongo = new MongoClient("localhost", 27017);
+            this.mongo = new MongoClient("192.99.18.45", 27017);
             this.db = mongo.getDB("minehut");
             db.addOption(Bytes.QUERYOPTION_NOTIMEOUT);
             this.playersCollection = db.getCollection("players");

@@ -7,41 +7,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5dfaddc8-e8c5-4503-ba71-03a3c5838829" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/minehut/core/command/bannedCommandManager/BannedCommandManager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/minehut/core/util/common/inventory/InvUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/minehut/core/command/commands/PluginsCommand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/minehut/core/rules/RuleManager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/minehut/core/rules/RulesCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Core/com/minehut/core/util/common/chat/C.class" afterPath="$PROJECT_DIR$/out/production/Core/com/minehut/core/util/common/chat/C.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Core/com/minehut/core/command/Command.class" afterPath="$PROJECT_DIR$/out/production/Core/com/minehut/core/command/Command.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Core/com/minehut/core/connection/ConnectionListener$1.class" afterPath="$PROJECT_DIR$/out/production/Core/com/minehut/core/connection/ConnectionListener$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Core/com/minehut/core/connection/ConnectionListener.class" afterPath="$PROJECT_DIR$/out/production/Core/com/minehut/core/connection/ConnectionListener.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Core/com/minehut/core/command/commands/ChunkCommand$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Core/com/minehut/core/command/commands/ChunkCommand.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Core/com/minehut/core/util/common/location/LocationUtils.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/minehut/core/command/commands/ChunkCommand.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/minehut/core/util/common/location/LocationUtils.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Core/com/minehut/core/Core.class" afterPath="$PROJECT_DIR$/out/production/Core/com/minehut/core/Core.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Core/com/minehut/core/util/common/chat/F.class" afterPath="$PROJECT_DIR$/out/production/Core/com/minehut/core/util/common/chat/F.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Core/com/minehut/core/util/common/items/ItemStackFactory$1Ench.class" afterPath="$PROJECT_DIR$/out/production/Core/com/minehut/core/util/common/items/ItemStackFactory$1Ench.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Core/com/minehut/core/util/common/items/ItemStackFactory.class" afterPath="$PROJECT_DIR$/out/production/Core/com/minehut/core/util/common/items/ItemStackFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Core/com/minehut/core/status/menu/ServerCluster$1.class" afterPath="$PROJECT_DIR$/out/production/Core/com/minehut/core/status/menu/ServerCluster$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Core/com/minehut/core/status/menu/ServerCluster.class" afterPath="$PROJECT_DIR$/out/production/Core/com/minehut/core/status/menu/ServerCluster.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Core/com/minehut/core/status/ServerInfo.class" afterPath="$PROJECT_DIR$/out/production/Core/com/minehut/core/status/ServerInfo.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Core/com/minehut/core/status/menu/ServerMenuManager.class" afterPath="$PROJECT_DIR$/out/production/Core/com/minehut/core/status/menu/ServerMenuManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Core/com/minehut/core/command/commands/ServersCommand.class" afterPath="$PROJECT_DIR$/out/production/Core/com/minehut/core/command/commands/ServersCommand.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Core/com/minehut/core/status/download/StatusDownloader.class" afterPath="$PROJECT_DIR$/out/production/Core/com/minehut/core/status/download/StatusDownloader.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Core/com/minehut/core/status/StatusManager.class" afterPath="$PROJECT_DIR$/out/production/Core/com/minehut/core/status/StatusManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/minehut/core/util/common/chat/C.java" afterPath="$PROJECT_DIR$/src/com/minehut/core/util/common/chat/C.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/minehut/core/command/Command.java" afterPath="$PROJECT_DIR$/src/com/minehut/core/command/Command.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/minehut/core/connection/ConnectionListener.java" afterPath="$PROJECT_DIR$/src/com/minehut/core/connection/ConnectionListener.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/minehut/core/Core.java" afterPath="$PROJECT_DIR$/src/com/minehut/core/Core.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/minehut/core/util/common/chat/F.java" afterPath="$PROJECT_DIR$/src/com/minehut/core/util/common/chat/F.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/minehut/core/util/common/items/ItemStackFactory.java" afterPath="$PROJECT_DIR$/src/com/minehut/core/util/common/items/ItemStackFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/minehut/core/status/menu/ServerCluster.java" afterPath="$PROJECT_DIR$/src/com/minehut/core/status/menu/ServerCluster.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/minehut/core/status/ServerInfo.java" afterPath="$PROJECT_DIR$/src/com/minehut/core/status/ServerInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/minehut/core/status/menu/ServerMenuManager.java" afterPath="$PROJECT_DIR$/src/com/minehut/core/status/menu/ServerMenuManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/minehut/core/command/commands/ServersCommand.java" afterPath="$PROJECT_DIR$/src/com/minehut/core/command/commands/ServersCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/minehut/core/status/download/StatusDownloader.java" afterPath="$PROJECT_DIR$/src/com/minehut/core/status/download/StatusDownloader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/minehut/core/status/StatusManager.java" afterPath="$PROJECT_DIR$/src/com/minehut/core/status/StatusManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/core.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/core.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Core/plugin.yml" afterPath="$PROJECT_DIR$/out/production/Core/plugin.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/plugin.yml" afterPath="$PROJECT_DIR$/src/plugin.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Core.iws" />
@@ -68,72 +42,28 @@
         <entry file="file://$PROJECT_DIR$/src/com/minehut/core/Core.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="137" column="0" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#2280#2281#0" expanded="false" />
-                <element signature="e#2311#2312#0" expanded="false" />
-                <element signature="e#2365#2366#0" expanded="false" />
-                <element signature="e#2433#2434#0" expanded="false" />
-                <element signature="e#2487#2488#0" expanded="false" />
-                <element signature="e#2550#2551#0" expanded="false" />
-                <element signature="e#4810#4811#0" expanded="false" />
-                <element signature="e#4843#4844#0" expanded="false" />
-                <element signature="e#4880#4881#0" expanded="false" />
-                <element signature="e#4908#4909#0" expanded="false" />
-                <element signature="e#4933#4934#0" expanded="false" />
-                <element signature="e#4958#4959#0" expanded="false" />
-                <element signature="e#5008#5009#0" expanded="false" />
-                <element signature="e#5048#5049#0" expanded="false" />
-                <element signature="e#5109#5110#0" expanded="false" />
-                <element signature="e#5137#5138#0" expanded="false" />
-                <element signature="e#5184#5185#0" expanded="false" />
-                <element signature="e#5220#5221#0" expanded="false" />
-                <element signature="e#5277#5278#0" expanded="false" />
-                <element signature="e#5318#5319#0" expanded="false" />
-              </folding>
+              <caret line="87" column="8" selection-start-line="87" selection-start-column="8" selection-end-line="100" selection-end-column="30" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RuleManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/minehut/core/rules/RuleManager.java">
+      <file leaf-file-name="StatusManager.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/minehut/core/status/StatusManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="154" column="72" selection-start-line="154" selection-start-column="72" selection-end-line="154" selection-end-column="72" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#3569#3570#0" expanded="false" />
-                <element signature="e#3615#3616#0" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="0.7132353">
+              <caret line="51" column="40" selection-start-line="51" selection-start-column="40" selection-end-line="51" selection-end-column="40" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ServerMenuManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/minehut/core/status/menu/ServerMenuManager.java">
+      <file leaf-file-name="ServerInfo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/minehut/core/status/ServerInfo.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="77" column="28" selection-start-line="77" selection-start-column="28" selection-end-line="77" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#8205#8206#0" expanded="false" />
-                <element signature="e#8252#8253#0" expanded="false" />
-                <element signature="e#8506#8507#0" expanded="false" />
-                <element signature="e#8545#8546#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PluginsCommand.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/minehut/core/command/commands/PluginsCommand.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="28" column="33" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
+              <caret line="33" column="15" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="15" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -148,88 +78,66 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ServerCluster.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/minehut/core/status/menu/ServerCluster.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="99" column="0" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StatusManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/minehut/core/status/StatusManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="52" column="16" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Rank.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Rank.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/minehut/core/player/Rank.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.75">
-              <caret line="38" column="24" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ItemStackFactory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/minehut/core/util/common/items/ItemStackFactory.java">
+      <file leaf-file-name="F.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/minehut/core/util/common/chat/F.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="34" column="40" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
+              <caret line="133" column="5" selection-start-line="133" selection-start-column="5" selection-end-line="133" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChunkCommand.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/minehut/core/command/commands/ChunkCommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="59" column="21" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LocationConverter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/minehut/core/util/common/location/LocationConverter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="false" />
-                <element signature="method#Ench#0;class#7631:8037" expanded="false" />
-                <element signature="e#7888#7889#0" expanded="false" />
-                <element signature="e#7932#7933#0" expanded="false" />
-                <element signature="e#7983#7984#0" expanded="false" />
-                <element signature="e#8026#8027#0" expanded="false" />
-                <element signature="e#8086#8092#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ServerInfo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/minehut/core/status/ServerInfo.java">
+      <file leaf-file-name="LocationUtils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/minehut/core/util/common/location/LocationUtils.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+              <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="false" />
-                <element signature="e#1656#1657#0" expanded="false" />
-                <element signature="e#1683#1684#0" expanded="false" />
-                <element signature="e#1716#1717#0" expanded="false" />
-                <element signature="e#1745#1746#0" expanded="false" />
-                <element signature="e#1783#1784#0" expanded="false" />
-                <element signature="e#1817#1818#0" expanded="false" />
-                <element signature="e#1846#1847#0" expanded="false" />
-                <element signature="e#1871#1872#0" expanded="false" />
-                <element signature="e#1899#1900#0" expanded="false" />
-                <element signature="e#1926#1927#0" expanded="false" />
-                <element signature="e#1957#1958#0" expanded="false" />
-                <element signature="e#1984#1985#0" expanded="false" />
-                <element signature="e#2021#2022#0" expanded="false" />
-                <element signature="e#2057#2058#0" expanded="false" />
-                <element signature="e#2091#2092#0" expanded="false" />
-                <element signature="e#2124#2125#0" expanded="false" />
-                <element signature="e#2158#2159#0" expanded="false" />
-                <element signature="e#2188#2189#0" expanded="false" />
-                <element signature="e#2217#2218#0" expanded="false" />
-                <element signature="e#2244#2245#0" expanded="false" />
-                <element signature="e#2275#2276#0" expanded="false" />
-                <element signature="e#2302#2303#0" expanded="false" />
-                <element signature="e#2337#2338#0" expanded="false" />
-                <element signature="e#2370#2371#0" expanded="false" />
-                <element signature="e#2405#2406#0" expanded="false" />
-                <element signature="e#2436#2437#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Command.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/minehut/core/command/Command.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="61" column="13" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -285,7 +193,6 @@
         <option value="$PROJECT_DIR$/src/com/minehut/core/command/commands/UpdateCommand.java" />
         <option value="$PROJECT_DIR$/src/com/minehut/core/util/common/items/EnchantGlow.java" />
         <option value="$PROJECT_DIR$/src/plugin.yml" />
-        <option value="$PROJECT_DIR$/src/com/minehut/core/util/common/chat/F.java" />
         <option value="$PROJECT_DIR$/src/com/minehut/core/status/StatusManager.java" />
         <option value="$PROJECT_DIR$/src/com/minehut/core/util/common/chat/C.java" />
         <option value="$PROJECT_DIR$/src/com/minehut/core/status/ServerInfo.java" />
@@ -300,9 +207,12 @@
         <option value="$PROJECT_DIR$/src/com/minehut/core/status/menu/ServerMenuManager.java" />
         <option value="$PROJECT_DIR$/src/com/minehut/core/rules/RuleManager.java" />
         <option value="$PROJECT_DIR$/src/com/minehut/core/command/commands/PluginsCommand.java" />
-        <option value="$PROJECT_DIR$/src/com/minehut/core/Core.java" />
         <option value="$PROJECT_DIR$/src/com/minehut/core/util/common/items/ItemStackFactory.java" />
         <option value="$PROJECT_DIR$/src/com/minehut/core/status/menu/ServerCluster.java" />
+        <option value="$PROJECT_DIR$/src/com/minehut/core/util/common/chat/F.java" />
+        <option value="$PROJECT_DIR$/src/com/minehut/core/util/common/location/LocationUtils.java" />
+        <option value="$PROJECT_DIR$/src/com/minehut/core/command/commands/ChunkCommand.java" />
+        <option value="$PROJECT_DIR$/src/com/minehut/core/Core.java" />
       </list>
     </option>
   </component>
@@ -317,9 +227,9 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="68" />
-    <option name="y" value="23" />
-    <option name="width" value="1212" />
+    <option name="x" value="360" />
+    <option name="y" value="220" />
+    <option name="width" value="1228" />
     <option name="height" value="777" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -345,7 +255,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -414,193 +323,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="util" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="util" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="util" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="player" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="util" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="items" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="status" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="status" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="upload" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="status" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="menu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="status" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="download" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -666,28 +389,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="connection" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="command" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -718,8 +419,23 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="META-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
@@ -741,8 +457,8 @@
       <recent name="$PROJECT_DIR$/META-INF" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.minehut.core.rules" />
       <recent name="com.minehut.core.command.commands" />
+      <recent name="com.minehut.core.rules" />
     </key>
   </component>
   <component name="RunManager">
@@ -898,7 +614,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="68" y="23" width="1212" height="777" extended-state="6" />
+    <frame x="360" y="220" width="1228" height="777" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -910,7 +626,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22772278" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35179153" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -958,27 +674,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/minehut/core/player/Rank.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="43" column="15" selection-start-line="43" selection-start-column="15" selection-end-line="43" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/minehut/core/Core.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/minehut/core/player/PlayerInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="44" column="5" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/minehut/core/connection/ConnectionListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1011,13 +706,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="56" column="25" selection-start-line="56" selection-start-column="25" selection-end-line="56" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/status.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -1154,13 +842,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/minehut/core/command/commands/UpdateCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/minehut/core/util/common/items/EnchantGlow.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1168,24 +849,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/minehut/core/util/common/chat/F.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/minehut/core/util/common/chat/C.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="95" column="58" selection-start-line="95" selection-start-column="58" selection-end-line="95" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/META-INF/MANIFEST.MF">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1217,13 +884,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/minehut/core/command/Command.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="61" column="13" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/minehut/core/connection/ConnectionListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1235,7 +895,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="62" selection-end-column="53" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1243,43 +902,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/minehut/core/status/ServerInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1656#1657#0" expanded="false" />
-            <element signature="e#1683#1684#0" expanded="false" />
-            <element signature="e#1716#1717#0" expanded="false" />
-            <element signature="e#1745#1746#0" expanded="false" />
-            <element signature="e#1783#1784#0" expanded="false" />
-            <element signature="e#1817#1818#0" expanded="false" />
-            <element signature="e#1846#1847#0" expanded="false" />
-            <element signature="e#1871#1872#0" expanded="false" />
-            <element signature="e#1899#1900#0" expanded="false" />
-            <element signature="e#1926#1927#0" expanded="false" />
-            <element signature="e#1957#1958#0" expanded="false" />
-            <element signature="e#1984#1985#0" expanded="false" />
-            <element signature="e#2021#2022#0" expanded="false" />
-            <element signature="e#2057#2058#0" expanded="false" />
-            <element signature="e#2091#2092#0" expanded="false" />
-            <element signature="e#2124#2125#0" expanded="false" />
-            <element signature="e#2158#2159#0" expanded="false" />
-            <element signature="e#2188#2189#0" expanded="false" />
-            <element signature="e#2217#2218#0" expanded="false" />
-            <element signature="e#2244#2245#0" expanded="false" />
-            <element signature="e#2275#2276#0" expanded="false" />
-            <element signature="e#2302#2303#0" expanded="false" />
-            <element signature="e#2337#2338#0" expanded="false" />
-            <element signature="e#2370#2371#0" expanded="false" />
-            <element signature="e#2405#2406#0" expanded="false" />
-            <element signature="e#2436#2437#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1287,13 +909,62 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="77" column="28" selection-start-line="77" selection-start-column="28" selection-end-line="77" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/minehut/core/command/commands/PluginsCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="33" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/minehut/core/util/common/items/ItemStackFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="40" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/minehut/core/status/menu/ServerCluster.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="99" column="0" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#8205#8206#0" expanded="false" />
-            <element signature="e#8252#8253#0" expanded="false" />
-            <element signature="e#8506#8507#0" expanded="false" />
-            <element signature="e#8545#8546#0" expanded="false" />
+            <element signature="e#4063#4064#0" expanded="false" />
+            <element signature="e#4109#4110#0" expanded="false" />
+            <element signature="e#4313#4314#0" expanded="false" />
+            <element signature="e#4353#4354#0" expanded="false" />
+            <element signature="e#11969#11970#0" expanded="false" />
+            <element signature="e#12002#12003#0" expanded="false" />
+            <element signature="e#12033#12034#0" expanded="false" />
+            <element signature="e#12060#12061#0" expanded="false" />
+            <element signature="e#12097#12098#0" expanded="false" />
+            <element signature="e#12124#12125#0" expanded="false" />
+            <element signature="e#12161#12162#0" expanded="false" />
+            <element signature="e#12192#12193#0" expanded="false" />
+            <element signature="e#12241#12242#0" expanded="false" />
+            <element signature="e#12271#12272#0" expanded="false" />
+            <element signature="e#12306#12307#0" expanded="false" />
+            <element signature="e#12337#12338#0" expanded="false" />
+            <element signature="e#12370#12371#0" expanded="false" />
+            <element signature="e#12396#12397#0" expanded="false" />
+            <element signature="e#12424#12425#0" expanded="false" />
+            <element signature="e#12451#12452#0" expanded="false" />
+            <element signature="e#12488#12489#0" expanded="false" />
+            <element signature="e#12521#12522#0" expanded="false" />
+            <element signature="e#12556#12557#0" expanded="false" />
+            <element signature="e#12587#12588#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/status.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -1309,13 +980,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/minehut/core/command/commands/PluginsCommand.java">
+    <entry file="file://$PROJECT_DIR$/META-INF/MANIFEST.MF">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="33" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/minehut/core/command/commands/UpdateCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="140" column="17" selection-start-line="140" selection-start-column="17" selection-end-line="140" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/minehut/core/player/Rank.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/minehut/core/util/common/chat/F.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="133" column="5" selection-start-line="133" selection-start-column="5" selection-end-line="133" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/minehut/core/command/Command.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="61" column="13" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/minehut/core/util/common/location/LocationConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/minehut/core/util/common/location/LocationUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/minehut/core/command/commands/ChunkCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="59" column="21" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1330,69 +1059,23 @@
     <entry file="file://$PROJECT_DIR$/src/com/minehut/core/Core.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="137" column="0" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2280#2281#0" expanded="false" />
-            <element signature="e#2311#2312#0" expanded="false" />
-            <element signature="e#2365#2366#0" expanded="false" />
-            <element signature="e#2433#2434#0" expanded="false" />
-            <element signature="e#2487#2488#0" expanded="false" />
-            <element signature="e#2550#2551#0" expanded="false" />
-            <element signature="e#4810#4811#0" expanded="false" />
-            <element signature="e#4843#4844#0" expanded="false" />
-            <element signature="e#4880#4881#0" expanded="false" />
-            <element signature="e#4908#4909#0" expanded="false" />
-            <element signature="e#4933#4934#0" expanded="false" />
-            <element signature="e#4958#4959#0" expanded="false" />
-            <element signature="e#5008#5009#0" expanded="false" />
-            <element signature="e#5048#5049#0" expanded="false" />
-            <element signature="e#5109#5110#0" expanded="false" />
-            <element signature="e#5137#5138#0" expanded="false" />
-            <element signature="e#5184#5185#0" expanded="false" />
-            <element signature="e#5220#5221#0" expanded="false" />
-            <element signature="e#5277#5278#0" expanded="false" />
-            <element signature="e#5318#5319#0" expanded="false" />
-          </folding>
+          <caret line="87" column="8" selection-start-line="87" selection-start-column="8" selection-end-line="100" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/minehut/core/util/common/items/ItemStackFactory.java">
+    <entry file="file://$PROJECT_DIR$/src/com/minehut/core/status/ServerInfo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="40" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#Ench#0;class#7631:8037" expanded="false" />
-            <element signature="e#7888#7889#0" expanded="false" />
-            <element signature="e#7932#7933#0" expanded="false" />
-            <element signature="e#7983#7984#0" expanded="false" />
-            <element signature="e#8026#8027#0" expanded="false" />
-            <element signature="e#8086#8092#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/minehut/core/status/menu/ServerCluster.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="99" column="0" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+          <caret line="33" column="15" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/minehut/core/status/StatusManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="52" column="16" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/minehut/core/player/Rank.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.75">
-          <caret line="38" column="24" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.7132353">
+          <caret line="51" column="40" selection-start-line="51" selection-start-column="40" selection-end-line="51" selection-end-column="40" />
           <folding />
         </state>
       </provider>

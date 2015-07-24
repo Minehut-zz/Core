@@ -72,12 +72,12 @@ public class F {
 	}
 
 	public static void broadcast(String message) {
-		Bukkit.getServer().broadcastMessage(C.blue + " > " + C.yellow + message);
+		Bukkit.getServer().broadcastMessage(C.gray + " * " + C.yellow + message);
 	}
 
 	public static void broadcast(List<String> messages) {
 		for (String s : messages) {
-			Bukkit.getServer().broadcastMessage(C.blue + " > " + C.yellow + s);
+			Bukkit.getServer().broadcastMessage(C.gray + " * " + C.yellow + s);
 		}
 	}
 
@@ -99,7 +99,7 @@ public class F {
 	}
 
 	public static void message(Player player, String message) {
-		player.sendMessage(C.blue + " > " + C.yellow + message);
+		player.sendMessage(C.gray + " * " + C.yellow + message);
 	}
 
 	public static void log(String message) {
