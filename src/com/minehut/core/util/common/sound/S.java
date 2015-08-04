@@ -44,6 +44,16 @@ public class S {
 		player.playSound(player.getLocation(), Sound.CLICK, 1, 2);
 	}
 
+	public static void pop(Player player) {
+		player.playSound(player.getEyeLocation(), Sound.ITEM_PICKUP, 10, 1);
+	}
+
+	public static void popAll() {
+		for(Player player : Bukkit.getServer().getOnlinePlayers()) {
+			player.playSound(player.getEyeLocation(), Sound.ITEM_PICKUP, 10, 1);
+		}
+	}
+
 	public static void clickAll() {
 		for (Player player : Bukkit.getOnlinePlayers()) {
 			player.playSound(player.getLocation(), Sound.CLICK, 1, 2);

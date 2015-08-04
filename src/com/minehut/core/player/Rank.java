@@ -14,6 +14,7 @@ public enum Rank {
     Admin("Admin", ChatColor.RED),
     Ref("Ref", ChatColor.BLUE),
     Mod("Mod", ChatColor.YELLOW),
+    Helper("Helper", ChatColor.DARK_BLUE),
     dank("Dank", ChatColor.GREEN),
     noob("Noob", ChatColor.GREEN),
     Royal("Royal", ChatColor.LIGHT_PURPLE),

@@ -6,11 +6,13 @@ import org.bukkit.Color;
 import org.bukkit.DyeColor;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
+import org.bukkit.entity.EntityType;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.LeatherArmorMeta;
 import org.bukkit.inventory.meta.SkullMeta;
 import org.bukkit.material.Dye;
+import org.bukkit.material.SpawnEgg;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -31,6 +33,14 @@ public class ItemStackFactory {
 
     public static ItemStack createDye(String name, int data, List<String> lore) {
         ItemStack itemStack = createItem(Material.INK_SACK, name, lore, 1);
+
+        itemStack.setDurability((short) data);
+
+        return itemStack;
+    }
+
+    public static ItemStack createSpawnEgg(String name, int data, List<String> lore) {
+        ItemStack itemStack = createItem(Material.MONSTER_EGG, name, lore, 1);
 
         itemStack.setDurability((short) data);
 
