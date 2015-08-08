@@ -86,6 +86,7 @@ public class ServerCluster implements Listener {
         }
         this.runnableID = this.continuousRefresh();
 
+        new ServerClusterCommand(Core.getInstance(), this);
 
         Bukkit.getServer().getPluginManager().registerEvents(this, Core.getInstance());
     }

@@ -54,24 +54,24 @@ public class ServerMenuManager implements Listener {
                 ),
                 true,
                 false,
-                3
+                4
         ));
 
-        this.clusters.add(new ServerCluster(this, "kingdom",
-                Material.ENDER_CHEST,
-                C.aqua + C.bold + "FEATURED " + C.yellow + C.bold + "Kingdom Servers",
-                Arrays.asList(
-                        "",
-                        C.gray + "Staff picked Kingdoms",
-                        C.gray + "that go above and beyond",
-                        C.gray + "to create fun, original",
-                        C.gray + "gameplay here on Minehut.",
-                        ""
-                ),
-                true,
-                true,
-                5
-        ));
+//        this.clusters.add(new ServerCluster(this, "kingdom",
+//                Material.ENDER_CHEST,
+//                C.aqua + C.bold + "FEATURED " + C.yellow + C.bold + "Kingdom Servers",
+//                Arrays.asList(
+//                        "",
+//                        C.gray + "Staff picked Kingdoms",
+//                        C.gray + "that go above and beyond",
+//                        C.gray + "to create fun, original",
+//                        C.gray + "gameplay here on Minehut.",
+//                        ""
+//                ),
+//                true,
+//                true,
+//                5
+//        ));
 
         this.clusters.add(new ServerCluster(this, "tnt",
                 Material.TNT,
@@ -85,12 +85,41 @@ public class ServerMenuManager implements Listener {
                 ),
                 false,
                 false,
-                19
+                25
         ));
 
-        this.clusters.add(new ServerCluster(this, "dtw",
-                Material.WOOL,
-                C.yellow + "Destroy the Wool",
+//        this.clusters.add(new ServerCluster(this, "tribes",
+//                Material.LEATHER_CHESTPLATE,
+//                C.yellow + "Tribes",
+//                Arrays.asList(
+//                        "",
+//                        C.gray + "Clash of Clans in Minecraft",
+//                        ""
+//                ),
+//                false,
+//                false,
+//                22,
+//                true,
+//                true
+//        ));
+
+        this.clusters.add(new ServerCluster(this, "vanilla",
+                Material.GRASS,
+                C.yellow + "Minehut Vanilla Server",
+                Arrays.asList(
+                        "",
+                        C.gray + "Kick back and chill",
+                        C.gray + "on Minehut's vanilla server.",
+                        ""
+                ),
+                false,
+                false,
+                22
+        ));
+
+        this.clusters.add(new ServerCluster(this, "warzone",
+                Material.BOW,
+                C.yellow + "Warzone",
                 Arrays.asList(
                         "",
                         C.gray + "Fight with your team to",
@@ -102,60 +131,12 @@ public class ServerMenuManager implements Listener {
                 ),
                 false,
                 false,
-                22
+                19
         ));
 
-        this.clusters.add(new ServerCluster(this, "duel",
-                Material.DIAMOND_SWORD,
-                C.yellow + "1v1 Duels",
-                Arrays.asList(
-                        "",
-                        C.gray + "Battle against players",
-                        C.gray + "on a plethora of 1v1 maps.",
-                        C.gray + "Features a full ELO system",
-                        C.gray + "to rank your skill.",
-                        ""
-                ),
-                false,
-                false,
-                25
-        ));
-
-        this.clusters.add(new ServerCluster(this, "arcade",
-                Material.FIREWORK,
-                C.yellow + "Arcade",
-                Arrays.asList(
-                        "",
-                        C.gray + "Rotate through fun minigames!",
-                        ""
-                ),
-                false,
-                false,
-                40,
-                true,
-                true
-        ));
-
-        this.clusters.add(new ServerCluster(this, "ctf",
-                Material.BANNER,
-                C.yellow + "Capture the Flag",
-                Arrays.asList(
-                        "",
-                        C.gray + "Capture the enemy team's",
-                        C.gray + "flag and bring it to your",
-                        C.gray + "base to win the game.",
-                        ""
-                ),
-                false,
-                false,
-                37,
-                true,
-                true
-        ));
-
-        this.clusters.add(new ServerCluster(this, "beta",
+        this.clusters.add(new ServerCluster(this, "dev",
                 Material.BONE,
-                C.red + "Beta Servers",
+                C.red + "Dev Servers",
                 Arrays.asList(
                         "",
                         C.gray + "Servers that are still",
@@ -165,7 +146,7 @@ public class ServerMenuManager implements Listener {
                 ),
                 false,
                 false,
-                43,
+                40,
                 false,
                 false
         ));
@@ -176,7 +157,7 @@ public class ServerMenuManager implements Listener {
     }
 
     public void createMenu() {
-        this.home = Bukkit.getServer().createInventory(null, 54, C.underline + "Server Selector");
+        this.home = Bukkit.getServer().createInventory(null, 45, C.underline + "Server Selector");
 
         for (ServerCluster serverCluster : this.clusters) {
             this.home.setItem(serverCluster.getSlot(), serverCluster.getHomeIcon());

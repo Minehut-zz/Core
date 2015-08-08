@@ -72,7 +72,7 @@ public class StatusDownloader {
 
     public boolean isOnline(long lastOnline) {
         long calculated = (System.currentTimeMillis() - lastOnline) / 1000;
-        if (calculated <= 5) {
+        if (calculated <= 10) {
             return true;
         } else {
             return false;
